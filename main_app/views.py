@@ -13,3 +13,7 @@ def about(request):
 def climbs_index(request):
   climbs=Climb.objects.all()
   return render(request, 'climbs/index.html', { 'climbs': climbs })
+
+def climbs_detail(request, climb_id):
+  climb = Climb.objects.get(id=climb_id)
+  return render(request, 'climbs/detail.html', { 'climb': climb })

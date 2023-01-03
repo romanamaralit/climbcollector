@@ -5,6 +5,7 @@
 
 {% for climb in climbs %}
   <div class="card">
+    <a href="{% url 'detail' climb.id %}">
     <div class="card-content">
       <span class="card-title">{{ climb.name }}</span>
       <p>Rating {{ climb.rating }}</p>
@@ -16,6 +17,7 @@
         <p>Has never been completed!</p>
       {% endif %}
     </div>
+  </a>
   </div>
 {% endfor %}
 

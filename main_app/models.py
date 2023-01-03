@@ -7,3 +7,7 @@ class Climb(models.Model):
     description = models.TextField(max_length=250)
     location =  models.TextField(max_length=250)
     people = models.IntegerField()
+
+
+    def __str__(self):
+        return self.name

@@ -1,7 +1,5 @@
 from django.shortcuts import render
 
-# Add the following import
-from django.http import HttpResponse
 
 # Add the Climb class & list and view function below the imports
 class Climb:  # Note that parens are optional if not inheriting from another class
@@ -21,7 +19,7 @@ climbs = [
 # Define the home view
 #create your views here
 def home(request):
-  return HttpResponse('<h1>Home Page</h1>')
+  return render(request, 'home.html')
 
 def about(request):
   return render(request, 'about.html')

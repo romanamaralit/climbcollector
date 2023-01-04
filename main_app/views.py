@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .models import Climb
 from django.views.generic import ListView
+from django.views.generic.edit import CreateView
 
 
 # Define the home view
@@ -17,6 +18,13 @@ def about(request):
 class ClimbList(ListView):
   model = Climb
   template_name = 'climbs/index.html'
+  fields = '__all__'
+
+class ClimbCreate(CreateView):
+  model = Climb
+  fields = '__all__'
+  success_url = '/climbs/'
+
 
 def climbs_detail(request, climb_id):
   climb = Climb.objects.get(id=climb_id)

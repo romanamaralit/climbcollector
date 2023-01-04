@@ -3,7 +3,7 @@
 
 <h1>Climb List</h1>
 
-{% for climb in climbs %}
+{% for climb in object_list %}
   <div class="card">
     <a href="{% url 'detail' climb.id %}">
     <div class="card-content">

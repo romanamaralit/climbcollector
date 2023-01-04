@@ -8,6 +8,7 @@ urlpatterns = [
     # route for climbs index
     path('climbs/', views.ClimbList.as_view(), name='index'),
     path('climbs/<int:climb_id>/', views.climbs_detail, name='detail'),
+    path('climbs/create/', views.ClimbCreate.as_view(), name='climbs_create'),
 ]
 
 

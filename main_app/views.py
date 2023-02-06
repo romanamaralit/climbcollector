@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from .models import Climb
 from django.views.generic import ListView
-from django.views.generic.edit import CreateView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 
 
 # Define the home view
@@ -25,6 +25,13 @@ class ClimbCreate(CreateView):
   fields = '__all__'
   success_url = '/climbs/'
 
+class ClimbUpdate(UpdateView):
+  model = Climb
+  fields = ['rating', 'description', 'location']
+
+class ClimbDelete(DeleteView):
+  model = Climb
+  success_url = '/climbs/'
 
 def climbs_detail(request, climb_id):
   climb = Climb.objects.get(id=climb_id)

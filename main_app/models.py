@@ -7,7 +7,7 @@ class Climb(models.Model):
     rating = models.CharField(max_length=100)
     description = models.TextField(max_length=250)
     location =  models.TextField(max_length=250)
-    people = models.IntegerField()
+    attempts = models.IntegerField()
 
 
     def __str__(self):

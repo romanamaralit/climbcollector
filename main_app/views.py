@@ -27,7 +27,7 @@ class ClimbCreate(CreateView):
 
 class ClimbUpdate(UpdateView):
   model = Climb
-  fields = ['rating', 'description', 'location', 'people']
+  fields = ['rating', 'description', 'location', 'attempts']
 
 class ClimbDelete(DeleteView):
   model = Climb

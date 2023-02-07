@@ -8,13 +8,13 @@
     <a href="{% url 'detail' climb.id %}">
     <div class="card-content">
       <span class="card-title">{{ climb.name }}</span>
-      <p>Rating {{ climb.rating }}</p>
+      <p>Rating: {{ climb.rating }}</p>
       <p>Description: {{ climb.description }}</p>
       <p>Location: {{ climb.location }}</p>
-      {% if climb.people > 0 %}
-        <p>Number of people that have completed this climb: {{ climb.people }}</p>
+      {% if climb.attempts > 1 %}
+        <p>How many attempts? {{ climb.attempts }}</p>
       {% else %}
-        <p>Has never been completed!</p>
+        <p>Flashed it!</p>
       {% endif %}
     </div>
   </a>

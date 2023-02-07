@@ -9,8 +9,8 @@
     <p>Rating: {{ climb.rating }}</p>
     <p>Description: {{ climb.description }}</p>
     <p>Location: {{ climb.location }}</p>
-    {% if climb.people > 0 %}
-      <p>Number of people that have completed this climb: {{ climb.people }}</p>
+    {% if climb.attempts > 1 %}
+      <p>How many attempts? {{ climb.attempts }}</p>
     {% else %}
       <p>Has never been completed!</p>
     {% endif %}
